@@ -1,0 +1,1 @@
+<%= render :partial => 'post_list', :locals => { :posts => Post.find( :all, :order => 'id DESC' ) } %>

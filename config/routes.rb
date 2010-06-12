@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts
 
   map.resources :users
+  
+  map.root	:controller => "home"
 
   # The priority is based upon order of creation: first created -> highest priority.
 

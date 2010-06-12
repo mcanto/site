@@ -1,0 +1,16 @@
+<% for post in posts %>
+	<div id="post" class="span-16 last">
+		<div id="postTitle" class="span-15 last">
+			<p><b><%= post.title %></b><br /><i><%= post.created_at.strftime "%a, %B %d, %Y at %I:%M:%p" %></i></p>
+		</div>
+		<div id="postBody" class="span-15 last">
+			<p><%= post.body %><br />
+				<i>
+					Posted by <%= post.user.nickname %> 
+					<%= time_ago_in_words(post.created_at) %> ago.
+				</i>
+			</p>			
+		</div>
+		<hr />
+	</div>
+<% end %>
